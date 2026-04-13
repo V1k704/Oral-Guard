@@ -16,6 +16,9 @@ class Settings:
             "http://localhost:5173",
             "http://127.0.0.1:8080",
             "http://127.0.0.1:5173",
+            "https://oral-guard.vercel.app",
+            "https://oral-guard-git-main-v1k704.vercel.app",  # Vercel preview deployments
+            os.getenv("VERCEL_URL", ""),  # Dynamic Vercel URL
         ]
         self.model_path = os.getenv("MODEL_PATH", "./backend/model_store/oralguard_model.joblib")
         self.image_model_path = os.getenv("IMAGE_MODEL_PATH", "./backend/model_store/oralguard_image_model.joblib")

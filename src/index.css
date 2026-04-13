@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 25% 94%;
+    --foreground: 0 0% 13%;
+
+    --card: 30 20% 97%;
+    --card-foreground: 0 0% 13%;
+
+    --popover: 30 20% 97%;
+    --popover-foreground: 0 0% 13%;
+
+    --primary: 30 50% 20%;
+    --primary-foreground: 30 25% 94%;
+
+    --secondary: 16 20% 47%;
+    --secondary-foreground: 30 25% 94%;
+
+    --muted: 30 15% 90%;
+    --muted-foreground: 30 10% 40%;
+
+    --accent: 25 77% 46%;
+    --accent-foreground: 30 25% 94%;
+
+    --destructive: 348 91% 47%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 170 37% 47%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 33 100% 50%;
+    --warning-foreground: 0 0% 13%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 30 50% 20%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 30 20% 97%;
+    --sidebar-foreground: 0 0% 13%;
+    --sidebar-primary: 30 50% 20%;
+    --sidebar-primary-foreground: 30 25% 94%;
+    --sidebar-accent: 30 15% 90%;
+    --sidebar-accent-foreground: 0 0% 13%;
+    --sidebar-border: 30 20% 88%;
+    --sidebar-ring: 30 50% 20%;
+
+    --shadow-sm: 0 0 0 1px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.1);
+    --shadow-md: 0 0 0 1px rgba(0,0,0,.05), 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+    --shadow-lg: 0 0 0 1px rgba(0,0,0,.05), 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+  }
+
+  .dark {
+    --background: 30 10% 8%;
+    --foreground: 30 15% 90%;
+    --card: 30 10% 12%;
+    --card-foreground: 30 15% 90%;
+    --popover: 30 10% 12%;
+    --popover-foreground: 30 15% 90%;
+    --primary: 30 25% 75%;
+    --primary-foreground: 30 10% 8%;
+    --secondary: 16 15% 35%;
+    --secondary-foreground: 30 15% 90%;
+    --muted: 30 10% 18%;
+    --muted-foreground: 30 10% 55%;
+    --accent: 25 70% 50%;
+    --accent-foreground: 30 10% 8%;
+    --destructive: 348 80% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 10% 18%;
+    --input: 30 10% 18%;
+    --ring: 30 25% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-bold;
+  }
+}
+
+@layer components {
+  .card-elevated {
+    box-shadow: var(--shadow-md);
+    @apply bg-card rounded-[20px] border-0;
+  }
+
+  .card-subtle {
+    box-shadow: var(--shadow-sm);
+    @apply bg-card rounded-2xl border-0;
+  }
+
+  .badge-risk-low {
+    @apply bg-success text-success-foreground;
+  }
+
+  .badge-risk-moderate {
+    @apply bg-warning text-warning-foreground;
+  }
+
+  .badge-risk-high {
+    @apply bg-destructive text-destructive-foreground;
+  }
+
+  .badge-risk-critical {
+    background: hsl(348 91% 30%);
+    @apply text-destructive-foreground;
+  }
+
+  .btn-primary-press {
+    @apply transition-all duration-200;
+  }
+
+  .btn-primary-press:active {
+    transform: scale(0.98);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-200;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .scanning-overlay {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(25 77% 46% / 0.08) 50%,
+      transparent 100%
+    );
+    animation: scan 2s ease-in-out infinite;
+  }
+
+  @keyframes scan {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .pulse-urgent {
+    animation: pulse-opacity 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-opacity {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

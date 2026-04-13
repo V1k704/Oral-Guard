@@ -48,4 +48,5 @@ def api_root():
 
 
 # Vercel serverless function export
-# Note: vercel-fastapi is not needed for Vercel v2 builds
+# The app variable must be available at module level
+# This is required for Vercel Python runtime

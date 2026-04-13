@@ -197,35 +197,141 @@ Keep each run reproducible with:
 - model artifact + metadata JSON
 
 ## 9) Project Structure (Current)
-## 9) Project Structure (Current)
-
 ```text
-OralGuard/
-├── src/                         # Frontend
+Oral Guard Application/
+├── components.json
+├── eslint.config.js
+├── index.html
+├── launch_backend.py
+├── package.json
+├── playwright-fixture.ts
+├── playwright.config.ts
+├── postcss.config.js
+├── quick_start_backend.py
+├── README.md
+├── tailwind.config.ts
+├── test_backend_startup.py
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vercel.json
+├── vite.config.ts
+├── vitest.config.ts
 ├── backend/
+│   ├── __init__.py
+│   ├── age_util.py
 │   ├── app.py
 │   ├── auth.py
 │   ├── database.py
+│   ├── image_model.py
 │   ├── inference.py
 │   ├── model.py
-│   ├── image_model.py
 │   ├── models.py
+│   ├── README.md
+│   ├── requirements.txt
 │   ├── schemas.py
 │   ├── settings.py
 │   ├── train.py
-│   ├── requirements.txt
-│   ├── routes/
-│   │   ├── auth.py
-│   │   └── assessments.py
-│   ├── scripts/
-│   │   ├── prepare_dataset.py
-│   │   ├── prepare_archive_dataset.py
-│   │   ├── run_pipeline.py
-│   │   ├── column_mapping.example.json
-│   │   └── pipeline_config.example.json
 │   ├── data/
-│   └── model_store/
-└── PROJECT_PROMPT.md            # Legacy context source (content merged here)
+│   │   └── oral_cancer_dataset.csv
+│   ├── model_store/
+│   │   └── oralguard_model.joblib
+│   └── routes/
+│       ├── __init__.py
+│       ├── assessments.py
+│       ├── auth.py
+│       ├── datasets.py
+│       └── patients.py
+│   └── scripts/
+│       ├── column_mapping.example.json
+│       ├── pipeline_config.example.json
+│       ├── prepare_archive_dataset.py
+│       ├── prepare_dataset.py
+│       └── run_pipeline.py
+├── Oral-Guard/
+│   └── LICENSE
+├── public/
+│   └── robots.txt
+└── src/
+    ├── App.css
+    ├── App.tsx
+    ├── index.css
+    ├── main.tsx
+    ├── vite-env.d.ts
+    ├── components/
+    │   ├── NavLink.tsx
+    │   └── ui/
+    │       ├── accordion.tsx
+    │       ├── alert-dialog.tsx
+    │       ├── alert.tsx
+    │       ├── aspect-ratio.tsx
+    │       ├── avatar.tsx
+    │       ├── badge.tsx
+    │       ├── breadcrumb.tsx
+    │       ├── button.tsx
+    │       ├── calendar.tsx
+    │       ├── carousel.tsx
+    │       ├── chart.tsx
+    │       ├── checkbox.tsx
+    │       ├── collapsible.tsx
+    │       ├── command.tsx
+    │       ├── context-menu.tsx
+    │       ├── dialog.tsx
+    │       ├── drawer.tsx
+    │       ├── dropdown-menu.tsx
+    │       ├── form.tsx
+    │       ├── hover-card.tsx
+    │       ├── input-otp.tsx
+    │       ├── input.tsx
+    │       ├── label.tsx
+    │       ├── menubar.tsx
+    │       ├── navigation-menu.tsx
+    │       ├── pagination.tsx
+    │       ├── popover.tsx
+    │       ├── progress.tsx
+    │       ├── radio-group.tsx
+    │       ├── resizable.tsx
+    │       ├── scroll-area.tsx
+    │       ├── select.tsx
+    │       ├── separator.tsx
+    │       ├── sheet.tsx
+    │       ├── sidebar.tsx
+    │       ├── skeleton.tsx
+    │       ├── slider.tsx
+    │       ├── sonner.tsx
+    │       ├── switch.tsx
+    │       ├── table.tsx
+    │       ├── tabs.tsx
+    │       ├── textarea.tsx
+    │       ├── toast.tsx
+    │       ├── toaster.tsx
+    │       ├── toggle-group.tsx
+    │       ├── toggle.tsx
+    │       ├── tooltip.tsx
+    │       └── ...
+    ├── hooks/
+    │   ├── use-mobile.tsx
+    │   └── use-toast.ts
+    ├── lib/
+    │   ├── age.ts
+    │   ├── api.ts
+    │   ├── datasets.ts
+    │   ├── rules-engine.ts
+    │   ├── types.ts
+    │   └── utils.ts
+    ├── pages/
+    │   ├── AboutPage.tsx
+    │   ├── AssessmentPage.tsx
+    │   ├── ExplanationPage.tsx
+    │   ├── Index.tsx
+    │   ├── LandingPage.tsx
+    │   ├── NotFound.tsx
+    │   ├── PatientRecordsPage.tsx
+    │   ├── ProcessingPage.tsx
+    │   └── ResultsPage.tsx
+    └── test/
+        ├── example.test.ts
+        └── setup.ts
 ```
 
 ## 10) Upgrade Outcomes & Current State

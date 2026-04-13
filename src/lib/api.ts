@@ -1,8 +1,8 @@
 import type { AssessmentData, AssessmentResult, ImageAssessmentResult, PatientRegistration, DatasetRegistryItem, DatasetRegistryApiItem } from './types';
 import { runInference } from './rules-engine';
 
-export const API_PRIMARY_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://127.0.0.1:8010';
-export const API_FALLBACK_BASE = 'http://127.0.0.1:8000';
+export const API_PRIMARY_BASE = import.meta.env.VITE_API_BASE_URL ?? 'https://oral-guard.onrender.com';
+export const API_FALLBACK_BASE = 'https://oral-guard.onrender.com';
 
 const DEFAULT_FETCH_TIMEOUT_MS = 12000;
 

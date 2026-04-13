@@ -1,0 +1,5 @@
+{
+  "source_csv": "C:/path/to/your/raw_dataset.csv",
+  "mapping_json": "backend/scripts/column_mapping.example.json",
+  "output_csv": "backend/data/oral_cancer_dataset.csv"
+}

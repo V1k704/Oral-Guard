@@ -384,4 +384,8 @@ Always consult qualified healthcare professionals for diagnosis and treatment de
 
 ## 14) License
 
-MIT License.
+Copyright (c) 2026 V1k704
+
+All rights reserved.
+
+This source code may not be copied, modified, distributed, sublicensed, or used in any form without explicit written permission from the author.

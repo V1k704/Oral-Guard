@@ -2,6 +2,12 @@
 
 This file is the single source of truth for OralGuard setup, architecture, evolution, training workflow, and current status.
 
+⚠️ This repository is NOT open source.
+
+Viewing access does not grant permission to copy,
+reuse, train on, redistribute, publish, or commercialize
+any part of this work.
+
 ## Quick Start (Copy-Paste Ready)
 
 > **Before running any command**: Replace `Oral Guard Application` in all paths with your actual project folder name.
